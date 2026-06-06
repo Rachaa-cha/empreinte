@@ -100,8 +100,6 @@ Deux ou trois choses a savoir :
 Réalisé par :
 
   - AMEZIANE RACHA
-  - DEMMOUCHE MASSILIA
-
 
   Merci d'avoir jeter un oeil. Bonne impression !
 
