@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EMPREINTE — atelier d'impression textile. Personnalise t-shirts, polos, hoodies, casquettes et tote bags. Laisse ton empreinte." />
+  <title>EMPREINTE — Atelier d'impression textile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,300..900;1,300..900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/accueil.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="EMPREINTE accueil">
+        <span class="brand__badge" aria-hidden="true">
+          <svg class="brand__mark" viewBox="0 0 44 44">
+            <rect class="brand__plate" x="2" y="2" width="40" height="40" rx="11" />
+            <g class="brand__print">
+              <path d="M22 12.5c-5.2 0-9.5 4.3-9.5 9.5v6" />
+              <path d="M22 16.4c-3 0-5.6 2.5-5.6 5.6v7.2" />
+              <path d="M22 16.4c3 0 5.6 2.5 5.6 5.6" />
+              <path d="M31.5 18.2c1.8 2.4 2.4 5.6 1.4 9" />
+              <path d="M22 20.3c-1 0-1.8.9-1.8 2v9.2" />
+              <path d="M22 20.3c1 0 1.8.9 1.8 2v3" />
+              <path d="M22 24.5v7" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__name">EMPR<b>EI</b>NTE</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a class="nav__link" href="index.html" aria-current="page">Accueil</a>
+        <a class="nav__link" href="content/produits.html">Produits</a>
+        <a class="nav__link" href="content/studio.html">Studio</a>
+      </nav>
+      <div class="nav__right">
+        <a class="icon-btn" href="content/connexion.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="icon-btn" data-cart-open aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html"><span>01</span> Accueil</a>
+    <a href="content/produits.html"><span>02</span> Produits</a>
+    <a href="content/studio.html"><span>03</span> Studio</a>
+    <a href="content/connexion.html"><span>04</span> Compte</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__ghost">INK</span>
+        <svg class="hero__print" viewBox="0 0 200 200" aria-hidden="true">
+          <g class="ridge" stroke="var(--red)" fill="none" stroke-width="2.5" stroke-linecap="round">
+            <path d="M100 20 C55 20 30 55 30 100" /><path d="M100 35 C68 35 50 60 50 100 L50 140" />
+            <path d="M100 50 C78 50 70 68 70 92 L70 160" /><path d="M100 50 C122 50 130 70 130 96" />
+            <path d="M150 45 C168 65 175 100 162 145" /><path d="M100 70 L100 175" />
+            <path d="M100 86 C90 86 86 96 86 110 L86 150" /><path d="M100 86 C112 86 116 98 116 112" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow hero-rise" style="--d:.05s">Atelier d'impression textile · à la demande</span>
+          <h1 class="hero__title">
+            <span class="line-mask"><span class="line hero-rise" style="--d:.12s">Laisse</span></span>
+            <span class="line-mask"><span class="line hero-rise" style="--d:.22s">ton</span></span>
+            <span class="line-mask"><span class="line line--red hero-rise" style="--d:.32s">empreinte.</span></span>
+          </h1>
+          <p class="hero__lede hero-rise" style="--d:.46s">
+            T-shirts, polos, hoodies, casquettes &amp; tote bags — recolorés en direct.
+            Pose ton texte ou ton logo, déplace-le au pixel près, puis imprime ta marque.
+          </p>
+          <div class="hero__cta hero-rise" style="--d:.58s">
+            <a class="btn btn-red btn-lg magnetic" href="content/studio.html">Ouvrir le studio <span class="arrow">→</span></a>
+            <a class="btn btn-outline btn-lg magnetic" href="content/produits.html">Voir les produits</a>
+          </div>
+          <ul class="hero__stats hero-rise" style="--d:.7s">
+            <li><strong>05</strong><span>familles de pièces</span></li>
+            <li><strong>10+</strong><span>encres au choix</span></li>
+            <li><strong>48 h</strong><span>de production</span></li>
+          </ul>
+        </div>
+        <aside class="hero__stage reveal" data-delay="3" aria-label="Pièce personnalisée">
+          <div class="stage__tag">EMPREINTE · custom</div>
+          <div class="hero__photo" id="hero-garment"></div>
+          <span class="stage__corner">EMP—01</span>
+        </aside>
+      </div>
+      <a class="hero__scroll" href="#categories" aria-label="Défiler">SCROLL ↓</a>
+    </section>
+    <div class="ticker red" aria-hidden="true">
+      <div class="ticker__track">
+        <span>SÉRIGRAPHIE</span><span>BRODERIE</span><span>DTF</span><span>FLOCAGE</span><span>SUR-MESURE</span><span>À LA DEMANDE</span>
+      </div>
+    </div>
+    <section class="section cats" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Le vestiaire</span>
+            <h2 class="reveal">Choisis<br>ta toile</h2>
+          </div>
+          <p class="reveal" data-delay="2">Cinq familles de pièces, choisies parce qu'elles s'impriment bien. Bonne matière, bonne coupe, et basta.</p>
+        </div>
+        <div class="cats__grid" id="cats-grid"></div>
+      </div>
+    </section>
+    <section class="manifesto">
+      <div class="container manifesto__inner">
+        <p class="manifesto__text reveal">
+          On ne vend pas des vêtements. <em>On imprime des idées.</em>
+          Rien n'est en stock tant que tu ne l'as pas dessiné. Pas de modèle
+          imposé, pas de minimum de commande. <mark>Tu dessines, on imprime.</mark>
+        </p>
+        <div class="manifesto__meta reveal" data-delay="2">
+          <span>EST. 2026</span><span>STUDIO D'IMPRESSION</span><span>MADE TO ORDER</span>
+        </div>
+      </div>
+    </section>
+    <section class="section process">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow reveal">Comment ça marche</span><h2 class="reveal">04 gestes</h2></div>
+          <p class="reveal" data-delay="2">De l'idée au colis. Pas besoin de compte pour jouer dans le studio.</p>
+        </div>
+        <ol class="process__list">
+          <li class="process__step reveal"><span class="process__num">01</span><h3>Choisis</h3><p>Sélectionne la pièce et la coupe qui te ressemblent.</p></li>
+          <li class="process__step reveal" data-delay="1"><span class="process__num">02</span><h3>Colore</h3><p>Pioche dans la palette d'encres ou compose ta teinte.</p></li>
+          <li class="process__step reveal" data-delay="2"><span class="process__num">03</span><h3>Imprime</h3><p>Ajoute ton texte, ta typo ou ton logo, puis tamponne.</p></li>
+          <li class="process__step reveal" data-delay="3"><span class="process__num">04</span><h3>Commande</h3><p>Ajoute au panier et valide. On s'occupe du reste.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section popular">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow reveal">Best-sellers</span><h2 class="reveal">Pièces<br>populaires</h2></div>
+          <a class="btn btn-outline magnetic reveal" data-delay="2" href="content/produits.html">Tout voir <span class="arrow">→</span></a>
+        </div>
+        <div class="prod-grid" id="popular-grid"></div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <h2 class="reveal">Ton design<br>mérite mieux<br>qu'un mockup.</h2>
+        <a class="btn btn-red btn-lg magnetic reveal" data-delay="2" href="content/studio.html">Lancer le studio <span class="arrow">→</span></a>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker__track"><span>EMPREINTE</span><span>TON STYLE</span><span>TON ENCRE</span><span>TA MARQUE</span></div></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__giant" aria-hidden="true">EMPREINTE</div>
+      <div class="footer__grid">
+        <div>
+          <h4>L'atelier</h4>
+          <p class="footer__about">Atelier d'impression textile à la demande. On transforme tes idées en pièces que tu portes vraiment.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="content/produits.html">Produits</a></li>
+            <li><a href="content/studio.html">Studio</a></li>
+            <li><a href="content/panier.html">Panier</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Compte</h4>
+          <ul>
+            <li><a href="content/connexion.html">Connexion</a></li>
+            <li><a href="content/inscription.html">Inscription</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> EMPREINTE — Studio d'impression textile</span>
+        <span>Fait main · 100% côté client</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/data.js"></script>
+  <script src="javascript/main.js"></script>
+  <script src="javascript/produits.js"></script>
+</body>
+</html>

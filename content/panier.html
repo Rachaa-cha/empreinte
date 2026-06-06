@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ton panier EMPREINTE — révise tes pièces et passe commande." />
+  <title>Panier — EMPREINTE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,300..900;1,300..900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/panier.css" />
+</head>
+<body>
+
+  <header class="nav scrolled">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html" aria-label="EMPREINTE accueil">
+        <span class="brand__badge" aria-hidden="true">
+          <svg class="brand__mark" viewBox="0 0 44 44">
+            <rect class="brand__plate" x="2" y="2" width="40" height="40" rx="11" />
+            <g class="brand__print">
+              <path d="M22 12.5c-5.2 0-9.5 4.3-9.5 9.5v6" />
+              <path d="M22 16.4c-3 0-5.6 2.5-5.6 5.6v7.2" />
+              <path d="M22 16.4c3 0 5.6 2.5 5.6 5.6" />
+              <path d="M31.5 18.2c1.8 2.4 2.4 5.6 1.4 9" />
+              <path d="M22 20.3c-1 0-1.8.9-1.8 2v9.2" />
+              <path d="M22 20.3c1 0 1.8.9 1.8 2v3" />
+              <path d="M22 24.5v7" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__name">EMPR<b>EI</b>NTE</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a class="nav__link" href="../index.html">Accueil</a>
+        <a class="nav__link" href="produits.html">Produits</a>
+        <a class="nav__link" href="studio.html">Studio</a>
+      </nav>
+      <div class="nav__right">
+        <a class="icon-btn" href="connexion.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="icon-btn" data-cart-open aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="../index.html"><span>01</span> Accueil</a>
+    <a href="produits.html"><span>02</span> Produits</a>
+    <a href="studio.html"><span>03</span> Studio</a>
+    <a href="connexion.html"><span>04</span> Compte</a>
+  </nav>
+
+  <main id="cart-page">
+    <section class="cart-hero">
+      <div class="container">
+        <span class="eyebrow">Ton panier · <span id="cart-count-label">0 pièce</span></span>
+        <h1 class="cart-hero__title">Pan<b>ier</b></h1>
+        <p class="cart-hero__sub">Révise tes empreintes avant de lancer la presse.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cart-layout">
+        <div class="cart-list" id="cart-list"></div>
+        <div class="cart-empty-state" id="cart-empty" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <h2>Panier vide</h2>
+          <p>Aucune pièce pour l'instant. Va imprimer quelque chose de beau.</p>
+          <a class="btn btn-red magnetic" href="studio.html">Ouvrir le studio <span class="arrow">→</span></a>
+        </div>
+        <aside class="cart-summary" id="cart-summary" hidden>
+          <h2>Récapitulatif</h2>
+          <div class="cart-summary__row"><span>Sous-total</span><span id="sum-sub">0 DA</span></div>
+          <div class="cart-summary__row"><span>Livraison</span><span id="sum-ship">400 DA</span></div>
+          <div class="cart-summary__row grand"><span>Total</span><span id="sum-grand">0 DA</span></div>
+          <button class="btn btn-red btn-block btn-lg magnetic" id="order-btn">Commander <span class="arrow">→</span></button>
+          <p class="cart-summary__note">Paiement à la livraison · Expédition partout<br>Commande simulée — projet de démo.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <div class="order-confirm" id="order-confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="order-confirm__card">
+      <div class="order-confirm__seal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m4 13 5 5L20 6"/></svg>
+      </div>
+      <h2 id="confirm-title">Commande<br>lancée ✦</h2>
+      <p>Ton empreinte part à l'atelier. On te contacte pour la livraison.</p>
+      <div class="order-confirm__rows">
+        <div><span>Référence</span><b id="confirm-ref">EMP-000000</b></div>
+        <div><span>Total payé</span><b id="confirm-total">0 DA</b></div>
+      </div>
+      <button class="btn btn-outline btn-block" id="confirm-close" type="button">Fermer</button>
+    </div>
+  </div>
+
+  <script src="../javascript/data.js"></script>
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/panier.js"></script>
+</body>
+</html>

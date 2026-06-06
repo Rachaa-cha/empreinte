@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Le vestiaire EMPREINTE : t-shirts, polos, hoodies, casquettes et tote bags personnalisables." />
+  <title>Produits — EMPREINTE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,300..900;1,300..900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/produits.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html" aria-label="EMPREINTE accueil">
+        <span class="brand__badge" aria-hidden="true">
+          <svg class="brand__mark" viewBox="0 0 44 44">
+            <rect class="brand__plate" x="2" y="2" width="40" height="40" rx="11" />
+            <g class="brand__print">
+              <path d="M22 12.5c-5.2 0-9.5 4.3-9.5 9.5v6" />
+              <path d="M22 16.4c-3 0-5.6 2.5-5.6 5.6v7.2" />
+              <path d="M22 16.4c3 0 5.6 2.5 5.6 5.6" />
+              <path d="M31.5 18.2c1.8 2.4 2.4 5.6 1.4 9" />
+              <path d="M22 20.3c-1 0-1.8.9-1.8 2v9.2" />
+              <path d="M22 20.3c1 0 1.8.9 1.8 2v3" />
+              <path d="M22 24.5v7" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__name">EMPR<b>EI</b>NTE</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a class="nav__link" href="../index.html">Accueil</a>
+        <a class="nav__link" href="produits.html" aria-current="page">Produits</a>
+        <a class="nav__link" href="studio.html">Studio</a>
+      </nav>
+      <div class="nav__right">
+        <a class="icon-btn" href="connexion.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="icon-btn" data-cart-open aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="../index.html"><span>01</span> Accueil</a>
+    <a href="produits.html"><span>02</span> Produits</a>
+    <a href="studio.html"><span>03</span> Studio</a>
+    <a href="connexion.html"><span>04</span> Compte</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Le vestiaire · <span id="prod-count">12</span> pièces</span>
+        <h1 class="page-hero__title reveal" data-delay="1">Produits</h1>
+        <p class="page-hero__lede reveal" data-delay="2">Toutes nos toiles, prêtes à imprimer. Filtre par famille ou cherche ta pièce — puis emmène-la au studio.</p>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <div class="filter-bar" id="filter-bar" role="tablist" aria-label="Filtrer par catégorie"></div>
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="prod-search" placeholder="Chercher une pièce…" aria-label="Chercher un produit" />
+        </div>
+      </div>
+    </div>
+
+    <section class="section catalogue">
+      <div class="container">
+        <div class="prod-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <div class="ticker red" aria-hidden="true"><div class="ticker__track"><span>TON DESIGN</span><span>TON ENCRE</span><span>TA PIÈCE</span><span>EMPREINTE</span></div></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__giant" aria-hidden="true">EMPREINTE</div>
+      <div class="footer__grid">
+        <div><h4>L'atelier</h4><p class="footer__about">Atelier d'impression textile à la demande. Tes idées, nos encres.</p></div>
+        <div><h4>Navigation</h4><ul>
+          <li><a href="../index.html">Accueil</a></li><li><a href="produits.html">Produits</a></li>
+          <li><a href="studio.html">Studio</a></li><li><a href="panier.html">Panier</a></li></ul></div>
+        <div><h4>Compte</h4><ul><li><a href="connexion.html">Connexion</a></li><li><a href="inscription.html">Inscription</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© <span data-year>2026</span> EMPREINTE — Studio d'impression textile</span><span>Fait main · 100% côté client</span></div>
+    </div>
+  </footer>
+
+  <script src="../javascript/data.js"></script>
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/produits.js"></script>
+</body>
+</html>

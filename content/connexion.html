@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Connexion à ton compte EMPREINTE." />
+  <title>Connexion — EMPREINTE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,300..900;1,300..900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/formulaire.css" />
+</head>
+<body>
+
+  <header class="nav scrolled">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html" aria-label="EMPREINTE accueil">
+        <span class="brand__badge" aria-hidden="true">
+          <svg class="brand__mark" viewBox="0 0 44 44">
+            <rect class="brand__plate" x="2" y="2" width="40" height="40" rx="11" />
+            <g class="brand__print">
+              <path d="M22 12.5c-5.2 0-9.5 4.3-9.5 9.5v6" />
+              <path d="M22 16.4c-3 0-5.6 2.5-5.6 5.6v7.2" />
+              <path d="M22 16.4c3 0 5.6 2.5 5.6 5.6" />
+              <path d="M31.5 18.2c1.8 2.4 2.4 5.6 1.4 9" />
+              <path d="M22 20.3c-1 0-1.8.9-1.8 2v9.2" />
+              <path d="M22 20.3c1 0 1.8.9 1.8 2v3" />
+              <path d="M22 24.5v7" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__name">EMPR<b>EI</b>NTE</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a class="nav__link" href="../index.html">Accueil</a>
+        <a class="nav__link" href="produits.html">Produits</a>
+        <a class="nav__link" href="studio.html">Studio</a>
+      </nav>
+      <div class="nav__right">
+        <a class="icon-btn" href="connexion.html" aria-label="Mon compte" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="icon-btn" data-cart-open aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="../index.html"><span>01</span> Accueil</a>
+    <a href="produits.html"><span>02</span> Produits</a>
+    <a href="studio.html"><span>03</span> Studio</a>
+    <a href="connexion.html"><span>04</span> Compte</a>
+  </nav>
+
+  <main class="auth">
+    
+    <section class="auth__art">
+      <span class="eyebrow">Espace client</span>
+      <svg class="auth__art-print" viewBox="0 0 40 40" aria-hidden="true"><g class="ridge">
+        <path d="M20 6 C11 6 6 13 6 20" /><path d="M20 11 C14 11 11 15 11 20 L11 26" />
+        <path d="M20 16 C16 16 16 19 16 22 L16 30" /><path d="M20 16 C24 16 24 20 24 23" />
+        <path d="M29 14 C32 17 34 22 32 28" /><path d="M20 22 L20 33" /></g></svg>
+      <div>
+        <h2>Re·<em>bonjour</em><br>l'artiste.</h2>
+        <p>Reprends tes créations là où tu les as laissées. Ton panier et tes empreintes t'attendent.</p>
+      </div>
+      <div class="auth__art-foot">
+        <span>EMPREINTE · ATELIER D'IMPRESSION</span>
+        <span>SESSION SÉCURISÉE CÔTÉ CLIENT · <b>localStorage</b></span>
+      </div>
+      <span class="ghost" aria-hidden="true">EMP</span>
+    </section>
+
+    <section class="auth__form-wrap">
+      <div class="auth__card">
+        <span class="eyebrow">Connexion</span>
+        <h1>Connexion</h1>
+        <p class="lede">Pas encore de compte ? <a href="inscription.html">Crée-en un ici →</a></p>
+
+        <form class="auth__form" id="login-form" novalidate>
+          <div id="login-out" class="auth__banner" role="status" aria-live="polite"></div>
+
+          <div class="fieldset">
+            <label for="login-email">Adresse e-mail</label>
+            <input class="field" type="email" id="login-email" autocomplete="email" placeholder="toi@exemple.com" required />
+            <span class="field-msg"></span>
+          </div>
+
+          <div class="fieldset">
+            <label for="login-pass">Mot de passe</label>
+            <input class="field" type="password" id="login-pass" autocomplete="current-password" placeholder="••••••" required />
+            <span class="field-msg"></span>
+          </div>
+
+          <button class="btn btn-red btn-block magnetic" type="submit">Se connecter <span class="arrow">→</span></button>
+
+          <p class="demo-note">Compte de démo : <b>demo@empreinte.studio</b> · mot de passe <b>demo123</b></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../javascript/data.js"></script>
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/validation.js"></script>
+  <script src="../javascript/auth.js"></script>
+</body>
+</html>

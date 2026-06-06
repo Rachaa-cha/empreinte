@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Studio EMPREINTE : personnalise ta pièce — couleur, taille, texte, typo et logo — en temps réel." />
+  <title>Studio — EMPREINTE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Archivo+Black&family=Bungee&family=Syne:wght@700;800&family=Unbounded:wght@600;800&family=Teko:wght@500;700&family=Fjalla+One&family=Russo+One&family=Titan+One&family=Abril+Fatface&family=Playfair+Display:wght@700;900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Serif+Display&family=Yeseva+One&family=Space+Mono:wght@400;700&family=Rubik+Mono+One&family=Monoton&family=Major+Mono+Display&family=Permanent+Marker&family=Caveat:wght@600;700&family=Pacifico&family=Shrikhand&family=Lobster&family=Archivo:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/personnalisation.css" />
+</head>
+<body class="studio-body">
+
+  <header class="nav scrolled">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html" aria-label="EMPREINTE accueil">
+        <span class="brand__badge" aria-hidden="true">
+          <svg class="brand__mark" viewBox="0 0 44 44">
+            <rect class="brand__plate" x="2" y="2" width="40" height="40" rx="11" />
+            <g class="brand__print">
+              <path d="M22 12.5c-5.2 0-9.5 4.3-9.5 9.5v6" />
+              <path d="M22 16.4c-3 0-5.6 2.5-5.6 5.6v7.2" />
+              <path d="M22 16.4c3 0 5.6 2.5 5.6 5.6" />
+              <path d="M31.5 18.2c1.8 2.4 2.4 5.6 1.4 9" />
+              <path d="M22 20.3c-1 0-1.8.9-1.8 2v9.2" />
+              <path d="M22 20.3c1 0 1.8.9 1.8 2v3" />
+              <path d="M22 24.5v7" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand__name">EMPR<b>EI</b>NTE</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a class="nav__link" href="../index.html">Accueil</a>
+        <a class="nav__link" href="produits.html">Produits</a>
+        <a class="nav__link" href="studio.html" aria-current="page">Studio</a>
+      </nav>
+      <div class="nav__right">
+        <a class="icon-btn" href="connexion.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="icon-btn" data-cart-open aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="../index.html"><span>01</span> Accueil</a>
+    <a href="produits.html"><span>02</span> Produits</a>
+    <a href="studio.html"><span>03</span> Studio</a>
+    <a href="connexion.html"><span>04</span> Compte</a>
+  </nav>
+
+  <main class="studio">
+    <aside class="rail" aria-label="Choisir la pièce">
+      <span class="rail__label">Pièce</span>
+      <div class="rail__list" id="garment-rail"></div>
+    </aside>
+    <section class="stage-wrap" aria-label="Aperçu">
+      <span class="reg-mark tl" aria-hidden="true"></span>
+      <span class="reg-mark tr" aria-hidden="true"></span>
+      <span class="reg-mark bl" aria-hidden="true"></span>
+      <span class="reg-mark br" aria-hidden="true"></span>
+      <span class="stage-plate" aria-hidden="true">EMP · ATELIER<br>PRESS — 01</span>
+      <span class="stage-axis" aria-hidden="true">x:00.0 / y:00.0</span>
+
+      <div class="stage-top">
+        <span class="stage-code">STUDIO / <span id="stage-code">EMP—TS</span></span>
+        <span class="stage-views" aria-hidden="true">Face · Dos</span>
+      </div>
+
+      <div class="stage" id="stage">
+        <span class="stage-glow" aria-hidden="true"></span>
+        <div class="stage__flip" id="flip">
+          <div class="stage__garment" id="studio-garment"></div>
+          <div class="layers" id="layers-stage"></div>
+        </div>
+        <div class="stage__ripple" id="ripple" aria-hidden="true"></div>
+      </div>
+
+      <div class="stage-hint">Chaque texte ou logo est un <b>calque</b> · clique-le pour le déplacer, redimensionner, pivoter · <b>Suppr</b> pour l'effacer.</div>
+    </section>
+    <aside class="panel" aria-label="Personnalisation">
+      <header class="panel__head">
+        <span class="eyebrow">Studio de personnalisation</span>
+        <h1 id="panel-title">T-Shirt</h1>
+      </header>
+
+      <div class="panel__scroll">
+        <section class="step">
+          <div class="step__head"><span class="step__n">01</span><h2>Couleur du textile</h2></div>
+          <div class="swatches" id="color-grid"></div>
+          <label class="custom-color">
+            <span>Teinte perso</span>
+            <input type="color" id="color-custom" value="#e7dfcd" aria-label="Couleur personnalisée" />
+          </label>
+        </section>
+        <section class="step">
+          <div class="step__head"><span class="step__n">02</span><h2>Taille</h2></div>
+          <div class="sizes" id="size-grid"></div>
+        </section>
+        <section class="step">
+          <div class="step__head"><span class="step__n">03</span><h2>Texte imprimé</h2></div>
+          <input type="text" id="txt-input" class="field" maxlength="22" placeholder="Tape ton slogan…" aria-label="Texte à imprimer" />
+          <div class="row">
+            <select id="font-select" class="field" aria-label="Police"></select>
+          </div>
+          <div class="font-preview" id="font-preview" aria-hidden="true">Empreinte</div>
+          <span class="mini-label">Couleur de l'encre</span>
+          <div class="swatches sm" id="txt-color"></div>
+          <button class="btn btn-outline btn-block" id="txt-add" type="button" style="margin-top:14px">+ Ajouter le texte</button>
+        </section>
+        <section class="step">
+          <div class="step__head"><span class="step__n">04</span><h2>Logo / Image</h2></div>
+          <label class="upload" id="upload-label">
+            <input type="file" id="logo-input" accept="image/png,image/jpeg,image/svg+xml" hidden />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16V4m0 0 4 4m-4-4L8 8"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span>Dépose ou choisis un fichier (PNG, JPG, SVG)</span>
+          </label>
+        </section>
+        <section class="step">
+          <div class="step__head"><span class="step__n">05</span><h2>Calques</h2></div>
+          <ul class="layers-list" id="layers-list"></ul>
+          <p class="layers-empty" id="layers-empty">Aucun calque. Ajoute un texte ou un logo.</p>
+        </section>
+        <section class="step">
+          <div class="step__head"><span class="step__n">06</span><h2>Quantité</h2></div>
+          <div class="qty big">
+            <button id="qty-minus" aria-label="moins">−</button>
+            <span id="qty-val">1</span>
+            <button id="qty-plus" aria-label="plus">+</button>
+          </div>
+        </section>
+      </div>
+      <footer class="summary">
+        <div class="summary__rows">
+          <div class="summary__row"><span>Pièce</span><span id="sum-name">T-Shirt · M</span></div>
+          <div class="summary__row"><span>Unité</span><span id="sum-unit">1 900 DA</span></div>
+          <div class="summary__row total"><span>Total</span><span id="sum-total">1 900 DA</span></div>
+        </div>
+        <div class="summary__actions">
+          <button class="btn btn-outline" id="stamp-btn" type="button">Tamponner ✦</button>
+          <button class="btn btn-red magnetic" id="add-btn" type="button">Ajouter <span class="arrow">→</span></button>
+        </div>
+      </footer>
+    </aside>
+  </main>
+  <script src="../javascript/data.js"></script>
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/personnalisation.js"></script>
+</body>
+</html>
